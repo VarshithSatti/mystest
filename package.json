@@ -22,7 +22,7 @@
   "scripts": {
     "postinstall": "node -e \"if (require('fs').existsSync('./lib/postinstall.js')){process.exit(5)} \" || node lib/postinstall.js",
     "lint": "eslint src",
-    "build": "tsc"
+    "build": "npm i --only=prod && npm i --only=dev && tsc"
   },
   "repository": "git+https://github.com/mysteriumnetwork/node-js.git",
   "author": "Mysterium Network",
